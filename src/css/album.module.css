@@ -1,0 +1,42 @@
+#container {
+    background-color: whitesmoke;
+    height: 200px;
+    width: 250px;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+#container:hover {
+    background: thistle;
+    transition: all 0.3s;
+}
+
+#container:hover #thumbnail {
+    background-color: whitesmoke;
+}
+
+#thumbnail{
+    height: 85%;
+    width: 100%;
+    border: 1px solid lightgray;
+    margin: auto;
+    border-radius: 5px;
+    background: white;
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+    margin-top: 7px;
+}
+
+#albumIcon {
+    color: lightgrey;
+    height: 100%;
+    width: 40%;
+    margin-left: 60px;
+}

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#albumContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+#addBtn, #cancelBtn {
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: normal;
+}

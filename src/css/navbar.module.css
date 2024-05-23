@@ -1,0 +1,14 @@
+#navbar {
+    height: 65px;
+    background: thistle;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#logoIcon {
+    font-size: 2.5rem;
+    margin-right: 5px;
+    color: darkslateblue;
+}

@@ -1,0 +1,39 @@
+#container {
+    background-color: #d3d3d363;
+    width: 35%;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+}
+
+h1 {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+}
+
+input {
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+    border: 1px solid lightgray;
+    padding: 10px 15px;
+    margin-right: 1rem;
+}
+
+#clearBtn, #addBtn {
+    border-radius: 5px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-style: none;
+}

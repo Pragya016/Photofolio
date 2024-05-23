@@ -1,0 +1,72 @@
+#imagesBox {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.imageBox {
+    height: 225px;
+    display: flex;
+    width: 40%;
+    border-radius: 5px;
+    background: lightgrey;
+    border: 1px solid lightgray;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.imageBox:hover{
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.imageBox:hover .buttonsContainer{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.imageBox:hover .image{
+    border: 1px solid lightgray;
+}
+
+.image {
+    width: 92%;
+    height: 165px;
+    position: relative;
+    left: 17px;
+    top: -36px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+
+.title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    margin-top: -26px;
+}
+
+.buttonsContainer {
+    opacity: 0;
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 30vw;
+    bottom: 29px;
+    z-index: 1;
+}
+
+.deleteBtn {
+    background-color: peachpuff !important;
+}
+
+.editBtn{
+    background-color: aliceblue !important;
+}
