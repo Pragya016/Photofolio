@@ -75,6 +75,7 @@ export default function ExtendedAlbum(props) {
           setSearch({ results: result, showResults: true });
       } else {
           setToggle(prevState => ({ form: true, search: prevState.search }))
+          setSearch({ results: imagesData, showResults: false })
         }
         
   }
