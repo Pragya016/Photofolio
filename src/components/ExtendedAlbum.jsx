@@ -72,12 +72,12 @@ export default function ExtendedAlbum(props) {
     
       if (searchVal !== '') {
         const result = imagesData.filter(image => image.title.toLowerCase().includes(searchVal.toLowerCase()));
-        setSearch({ results: result, showResults: true });
+          setSearch({ results: result, showResults: true });
       } else {
-        setSearch({results : imagesData, showResults : false})
-      }
+          setToggle(prevState => ({ form: true, search: prevState.search }))
+        }
         
-    }
+  }
 
     return (
         <>
@@ -85,7 +85,7 @@ export default function ExtendedAlbum(props) {
                 <AlbumHeader onBack={props.onBack} album={props.album} hasImages={hasImages} />
                 <AlbumActions hasImages={hasImages} toggleForm={toggle.form} handleToggleForm={handleToggleForm} toggleSearchContainer={toggleSearchContainer} showSearchInput={toggle.search} onSearchImage={handleDisplaySearchResults} />
             </div>
-            {!search.showResults && toggle.form && <AddImageForm onAddImage={handleAddImage} album={props.album} />}
+            {!toggle.search && toggle.form && <AddImageForm onAddImage={handleAddImage} album={props.album} />}
             {edit.isEditing && <UpdateImageForm editImageData={edit.editImage} onEditImage={handleUpdateImage} />}
             {!search.showResults && <ImagesList onExtendView={handleExtendView} images={{ images: imagesData, id: props.album.id }} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
             {search.results.length > 0 && search.showResults && <ImagesList onExtendView={handleExtendView} images={{images : search.results, id : props.album.id}} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
