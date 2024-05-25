@@ -8,7 +8,7 @@ import AddImageForm from './AddImageForm';
 import UpdateImageForm from './UpdateImageForm';
 import styles from '../css/extendedAlbum.module.css';
 import { addImageToFirebase, deleteImageFromFirebase, getImagesFromFirebase, updateImageToFirebase } from '../store/firebaseServices';
-import { listenToAlbumChanges } from '../store/firebaseServices'; // Adjust the path if needed
+import { listenToAlbumChanges } from '../store/firebaseServices';
 
 export default function ExtendedAlbum(props) {
     const dispatch = useDispatch();
@@ -74,12 +74,13 @@ export default function ExtendedAlbum(props) {
         const result = imagesData.filter(image => image.title.toLowerCase().includes(searchVal.toLowerCase()));
           setSearch({ results: result, showResults: true });
       } else {
+          console.log('hi', searchVal);
           setToggle(prevState => ({ form: true, search: prevState.search }))
           setSearch({ results: imagesData, showResults: false })
         }
         
   }
-
+    
     return (
         <>
             <div id={styles.mainContainer}>

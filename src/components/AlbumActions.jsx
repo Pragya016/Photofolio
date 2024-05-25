@@ -10,7 +10,7 @@ function AlbumActions({ hasImages, toggleForm, toggleSearchContainer, handleTogg
     function handleSubmitSearch(e) {
         e.preventDefault();
         setValue(e.target.value);
-        onSearchImage(value);
+        onSearchImage(e.target.value);
     }
 
     return (
