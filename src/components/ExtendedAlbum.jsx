@@ -21,14 +21,11 @@ export default function ExtendedAlbum(props) {
     useEffect(() => {
         const albumId = props.album.id;
 
-        // Fetch images initially
         dispatch(getImagesFromFirebase(albumId)).then(() => {
-            // Set up a listener for real-time updates
             const unsubscribe = listenToAlbumChanges(albumId, (newImagesData) => {
                 setImagesData(newImagesData);
             });
 
-            // Clean up listener on component unmount
             return () => unsubscribe();
         });
     }, [dispatch, props.album.id]);
@@ -61,8 +58,8 @@ export default function ExtendedAlbum(props) {
         toast.success('Image deleted successfully!');
     }
 
-    function handleExtendView(id, title, imageUrl) {
-        // Your extend view logic here
+    function handleExtendView(id, imageUrl) {
+        console.log(id, imageUrl)
     }
 
   function handleDisplaySearchResults(searchVal) {

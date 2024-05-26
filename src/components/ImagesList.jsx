@@ -12,7 +12,7 @@ export default function ImagesList(props) {
   return (
       <div id={styles.imagesBox}>
       { hasImages && images.map((data, i) => (
-        <div className={styles.imageBox} key={i} onClick={() => props.onExtendView(data.id, data.title, data.imageUrl)}>
+        <div className={styles.imageBox} key={i} onClick={() => props.onExtendView(data.timestamp, data.imageUrl)}>
               <div className={styles.buttonsContainer }>
                 <IconButton className={styles.deleteBtn} variant="contained" color='error' aria-label="delete" size="large" onClick={() => props.onDelete(id, images[i].timestamp)}>
                   <DeleteIcon fontSize="inherit" />

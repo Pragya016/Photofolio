@@ -19,7 +19,6 @@ export default function AddImageForm(props) {
     toast.success('Image added successfully!')
     setTitle('')
     setImageUrl('');
-    // titleRef.current.focus();
   }
 
 

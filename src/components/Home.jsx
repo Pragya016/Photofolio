@@ -52,6 +52,7 @@ export default function Home() {
 
     return (
         <div>
+            <ToastContainer />
             {!showAlbum ? <>
                 {toggle && <AddAlbumForm onSubmit={handleAddAlbum} />}
             <div className={styles.container}>
@@ -63,7 +64,6 @@ export default function Home() {
             </> : 
               <ExtendedAlbum album={albumData}  onBack={handleBackButton}/>  
             }
-            <ToastContainer />
         </div>
     );
 }
