@@ -1,7 +1,5 @@
 import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import { Button } from '@mui/material'
 import IconButton from '@mui/material/IconButton';
 import styles from '../css/ExtendedImage.module.css';
 
