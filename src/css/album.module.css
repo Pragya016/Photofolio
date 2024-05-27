@@ -12,7 +12,7 @@
 }
 
 #container:hover {
-    background: thistle;
+    background: lightblue;
     transition: all 0.3s;
 }
 

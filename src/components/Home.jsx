@@ -56,7 +56,7 @@ export default function Home() {
             {!showAlbum ? <>
                 {toggle && <AddAlbumForm onSubmit={handleAddAlbum} />}
             <div className={styles.container}>
-                <h1>Add A New Album</h1>
+                <h1>Your Albums</h1>
                 {toggle && <Button id={styles.addBtn} variant='outlined' color='error' startIcon={<HighlightOffIcon />} onClick={handleToggleForm}>Cancel</Button>}
                 {!toggle && <Button id={styles.cancelBtn} variant='outlined' startIcon={<AddCircleIcon />} onClick={handleToggleForm}>Add Album</Button>}
                 </div>

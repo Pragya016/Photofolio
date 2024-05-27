@@ -1,6 +1,6 @@
 #navbar {
     height: 65px;
-    background: thistle;
+    background: skyblue;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 #logoIcon {
-    font-size: 2.5rem;
-    margin-right: 5px;
-    color: darkslateblue;
+    border-radius: 10px;
+    height: 85%;
+    margin-right: 10px;
 }

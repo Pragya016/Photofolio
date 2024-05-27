@@ -58,10 +58,6 @@ export default function ExtendedAlbum(props) {
         toast.success('Image deleted successfully!');
     }
 
-    function handleExtendView(id, imageUrl) {
-        console.log(id, imageUrl)
-    }
-
   function handleDisplaySearchResults(searchVal) {
       if (!Array.isArray(imagesData)) {
             return;
@@ -86,8 +82,8 @@ export default function ExtendedAlbum(props) {
             </div>
             {!toggle.search && toggle.form && <AddImageForm onAddImage={handleAddImage} album={props.album} />}
             {edit.isEditing && <UpdateImageForm editImageData={edit.editImage} onEditImage={handleUpdateImage} />}
-            {!search.showResults && <ImagesList onExtendView={handleExtendView} images={{ images: imagesData, id: props.album.id }} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
-            {search.results.length > 0 && search.showResults && <ImagesList onExtendView={handleExtendView} images={{images : search.results, id : props.album.id}} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
+            {!search.showResults && <ImagesList images={{ images: imagesData, id: props.album.id }} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
+            {search.results.length > 0 && search.showResults && <ImagesList images={{images : search.results, id : props.album.id}} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
             <ToastContainer />
         </>
     );
