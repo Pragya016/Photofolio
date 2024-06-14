@@ -15,17 +15,22 @@
 
 .heading {
     margin-left: 25px;
+    color: white;
 }
 
-#leftSide{
+#leftSide {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 50%;
     margin: auto;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
 }
 
-#rightSide{
+#rightSide {
     display: flex;
     width: 50%;
     justify-content: end;
@@ -38,7 +43,8 @@ button {
 
 #backBtn {
     color: black;
-    box-shadow: 0 3px 8px lightgrey;
+    box-shadow: 0 3px 8px grey;
+    background-color: white;
 }
 
 #backBtn:hover {
@@ -47,18 +53,21 @@ button {
 }
 
 #searchBtn {
-    margin-right: 20px;
+    position: relative;
+    right: 20px;
+    color: rgb(78, 78, 78);
 }
 
 .searchInput {
     margin: 0;
-    opacity: 0; 
-    width: 0%; 
-    transition: opacity 0.6s, width 0.3s; 
+    opacity: 0;
+    width: 0%;
+    outline: none;
+    transition: opacity 0.6s, width 0.3s;
 }
 
 .showSearchInput {
     opacity: 1;
-    width: 40%;
-    transition: opacity 0s, width 0.3s; /* No delay on showing */
+    width: 60%;
+    transition: opacity 0s, width 0.3s;
 }

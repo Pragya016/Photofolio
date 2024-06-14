@@ -52,18 +52,18 @@ export default function Home() {
 
     return (
         <div>
-            <ToastContainer />
             {!showAlbum ? <>
                 {toggle && <AddAlbumForm onSubmit={handleAddAlbum} />}
             <div className={styles.container}>
-                <h1>Your Albums</h1>
-                {toggle && <Button id={styles.addBtn} variant='outlined' color='error' startIcon={<HighlightOffIcon />} onClick={handleToggleForm}>Cancel</Button>}
-                {!toggle && <Button id={styles.cancelBtn} variant='outlined' startIcon={<AddCircleIcon />} onClick={handleToggleForm}>Add Album</Button>}
+                <h1 id={styles.albumFormText}>Your Albums</h1>
+                {toggle && <Button id={styles.addBtn} variant='contained' color='error' startIcon={<HighlightOffIcon />} onClick={handleToggleForm}>Cancel</Button>}
+                {!toggle && <Button id={styles.cancelBtn} variant='contained' startIcon={<AddCircleIcon />} onClick={handleToggleForm}>Add Album</Button>}
                 </div>
                 <AlbumList albums={albums} onClick={handleDisplayAlbum} />
             </> : 
               <ExtendedAlbum album={albumData}  onBack={handleBackButton}/>  
             }
+            <ToastContainer />
         </div>
     );
 }

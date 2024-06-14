@@ -35,7 +35,7 @@ export default function AddImageForm(props) {
   return (
     <div id={styles.container}>
       <form onSubmit={handleAddImage} id={styles.form}>
-        <h2>Add image to {props.albumName}</h2>
+        <h2 id={styles.addImageFormHeading}>Add image to {props.album.album}</h2>
         
         <input
           type="text"

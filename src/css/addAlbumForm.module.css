@@ -1,5 +1,5 @@
 #container {
-    background-color: #d3d3d363;
+    background-color: rgba(255, 255, 255, 0.5);
     width: 35%;
     margin: auto;
     border-radius: 15px;
@@ -10,8 +10,13 @@
     height: 200px;
 }
 
-h1 {
+#albumFormHeading {
     margin: 0;
+    background: linear-gradient(to right, red, orange, green, skyblue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: "Oleo Script", system-ui;
+    font-style: normal;
 }
 
 form {
@@ -19,21 +24,23 @@ form {
     display: flex;
     justify-content: space-evenly;
     width: 85%;
+    align-items: center;
 }
 
 input {
-    border-radius: 5px;
+    border-radius: 50px;
     outline: none;
     width: 80%;
     border: 1px solid lightgray;
     padding: 10px 15px;
-    margin-right: 1rem;
+    margin-right: 5px;
 }
 
 #clearBtn, #addBtn {
     border-radius: 5px;
-    margin-left: 10px;
     font-family: sans-serif;
     font-weight: 900;
-    font-style: none;
+    height: 35px;
+    margin: 3px;
+    width: 20%;
 }

@@ -20,15 +20,15 @@ function AlbumActions({ hasImages, toggleForm, toggleSearchContainer, handleTogg
                     <form className={`${styles.searchInput} ${showSearchInput ? styles.showSearchInput : ''}`}>
                         <input ref={searchRef} type="search" value={value} onChange={handleSubmitSearch}/>
                     </form>
-                    <IconButton id={styles.searchBtn} variant="contained" color='primary' aria-label="search" size="large" onClick={toggleSearchContainer}>
+                    <IconButton id={styles.searchBtn} variant="contained" aria-label="search" size="large" onClick={toggleSearchContainer}>
                         <SearchIcon fontSize="inherit" />
                     </IconButton>
                 </>
             )}
             {toggleForm ? (
-                <Button variant='outlined' color='error' onClick={handleToggleForm}>Cancel</Button>
+                <Button variant='contained' color='error' onClick={handleToggleForm}>Cancel</Button>
             ) : (
-                <Button variant='outlined' color='primary' onClick={handleToggleForm}>Add Image</Button>
+                <Button variant='contained' color='primary' onClick={handleToggleForm}>Add Image</Button>
             )}
         </div>
     );
