@@ -2,12 +2,12 @@
 
 #navbar {
     height: 65px;
-    background: #242526;
+    background: #e7f5fe;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    box-shadow: 0 5px 10px darkgrey;
+    box-shadow: 0 5px 10px rgb(125, 125, 125);
 }
 
 #logoIcon {
@@ -22,7 +22,7 @@
     font-weight: 700;
     font-style: normal;
     font-size: 1.7rem;
-    background: linear-gradient(to right, red, orange, green, skyblue);
+    background: linear-gradient(to right, red, orange, green, #01667f);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }

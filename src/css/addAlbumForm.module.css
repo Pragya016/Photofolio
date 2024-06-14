@@ -12,7 +12,7 @@
 
 #albumFormHeading {
     margin: 0;
-    background: linear-gradient(to right, red, orange, green, skyblue);
+    background: linear-gradient(to right, red, orange, green, #01667f);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-family: "Oleo Script", system-ui;

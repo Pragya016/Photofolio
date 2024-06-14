@@ -8,12 +8,12 @@ html, body {
 #root {
   height: 100vh;
   width: 100vw;
-  background: url('https://cdn.pixabay.com/photo/2022/02/06/13/51/photo-album-6997179_1280.jpg');
+  background: url('https://cdn.pixabay.com/photo/2020/02/29/09/14/ship-4889509_1280.jpg');
 }
 
 .App {
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); 
 }

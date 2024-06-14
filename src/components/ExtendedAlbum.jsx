@@ -81,7 +81,7 @@ export default function ExtendedAlbum(props) {
                 <AlbumActions hasImages={hasImages} toggleForm={toggle.form} handleToggleForm={handleToggleForm} toggleSearchContainer={toggleSearchContainer} showSearchInput={toggle.search} onSearchImage={handleDisplaySearchResults} />
             </div>
             {!toggle.search && toggle.form && <AddImageForm onAddImage={handleAddImage} album={props.album} />}
-            {edit.isEditing && <UpdateImageForm editImageData={edit.editImage} onEditImage={handleUpdateImage} />}
+            {edit.isEditing && <UpdateImageForm onCancel={handleToggleEditForm} title={edit.editImage.title} editImageData={edit.editImage} onEditImage={handleUpdateImage} />}
             {!search.showResults && <ImagesList images={{ images: imagesData, id: props.album.id }} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
             {search.results.length > 0 && search.showResults && <ImagesList images={{images : search.results, id : props.album.id}} onEdit={handleToggleEditForm} onDelete={handleOnDeleteImage} />}
             <ToastContainer />

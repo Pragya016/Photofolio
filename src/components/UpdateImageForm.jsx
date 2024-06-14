@@ -19,10 +19,11 @@ export default function UpdateImageForm(props) {
   }
 
 
-  function handleClearInput(){
-    setTitle('')
-    setImageUrl('');
-    titleRef.current.focus();
+  function handleToggleForm(){
+    // setTitle('')
+    // setImageUrl('');
+    // titleRef.current.focus();
+    props.onCancel();
   }
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function UpdateImageForm(props) {
   return (
     <div id={styles.container}>
       <form onSubmit={handleUpdateImage} id={styles.form}>
-        <h2>Update Image</h2>
+        <h2 id={styles.updateImageHeading}>{ props.title} Details</h2>
         
         <input
           type="text"
@@ -59,7 +60,7 @@ export default function UpdateImageForm(props) {
             type='button'
             variant='contained'
             color='error'
-            onClick={handleClearInput}>Clear</Button>
+            onClick={handleToggleForm}>Cancel</Button>
           
           <Button
             id={styles.addBtn}

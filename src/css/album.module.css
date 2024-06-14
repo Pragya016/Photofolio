@@ -1,6 +1,6 @@
 #container {
-    background-color: lightgrey;
-    border: 1px solid lightgrey;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
     border-radius: 10px 10px 0 0;
     box-sizing: border-box;
     cursor: pointer;
@@ -11,8 +11,8 @@
 }
 
 #container:hover {
-    background: grey;
-    border: 1px solid grey;
+    background: #89aab8;
+    border: 1px solid #89aab8;
     transition: all 0.2s;
 }
 

@@ -1,5 +1,5 @@
 #mainContainer{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -33,4 +33,9 @@
     position: absolute;
     top: 18%;
     right: 24%;
+}
+
+#closeIcon {
+    height: 35px;
+    width: 35px;
 }
