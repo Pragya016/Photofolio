@@ -7,19 +7,19 @@ import ExtendedImage from './ExtendedImage';
 
 export default function ImagesList(props) {
   const [toggleImage, setToggleImage] = useState(false);
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState({imageUrl : '', title : ''});
   const { images, id } = props.images;  
   const hasImages = images.length > 0;
   const imageStyles = { backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }
   
-  function handleToggleImage(timestamp, imageUrl) {
+  function handleToggleImage(imageUrl, title) {
     setToggleImage(prevState => !prevState);
-    setImage(imageUrl);
+    setImage({imageUrl, title});
   }
 
   return (
     <>
-      {toggleImage ? <ExtendedImage imageUrl={image} onClose={handleToggleImage} /> :
+      {toggleImage ? <ExtendedImage imageData={image} onClose={handleToggleImage} /> :
       <div id={styles.imagesBox}>
       { hasImages && images.map((data, i) => (
         <div className={styles.imageBox} key={i}>
@@ -31,7 +31,7 @@ export default function ImagesList(props) {
                   <EditIcon fontSize="inherit" />
                 </IconButton>
               </div>
-          <div className={styles.image} style={{background : `url(${data.imageUrl})`, ...imageStyles}} onClick={() => handleToggleImage(data.timestamp, data.imageUrl)}/>
+          <div className={styles.image} style={{background : `url(${data.imageUrl})`, ...imageStyles}} onClick={() => handleToggleImage( data.imageUrl, data.title)}/>
           <p className={styles.title} >{data.title}</p>
           </div>
       ))}

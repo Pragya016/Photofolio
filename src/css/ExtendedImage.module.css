@@ -25,6 +25,24 @@
     height: 100%;
 }
 
+#header{
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 19%;
+    left: 25%;
+    height: 35px;
+}
+
+#title {
+    position: relative;
+    left: 47%;
+}
+/* 
 #closeBtn {
     cursor: pointer;
     margin-bottom: 10px;
@@ -34,8 +52,9 @@
     top: 18%;
     right: 24%;
 }
+*/
 
 #closeIcon {
-    height: 35px;
-    width: 35px;
-}
+    height: 25px;
+    width: 25px;
+} 
